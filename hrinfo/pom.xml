@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>hrapp</groupId>
+		<artifactId>HRInfo</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>hrapp</groupId>
+	<artifactId>hrinfo</artifactId>
+	<packaging>ear</packaging>
+	<name />
+	<version>0.0.1-SNAPSHOT</version>
+	<description />
+	<dependencies>
+		<dependency>
+			<groupId>hrapp</groupId>
+			<artifactId>hrinfo-business</artifactId>
+			<type>ejb</type>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>hrapp</groupId>
+			<artifactId>hrinfo-web</artifactId>
+			<type>war</type>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.14</version>
+			
+			<exclusions>
+			 <exclusion>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate</artifactId>
+			 </exclusion>
+			</exclusions>
+		</dependency>
+		
+	</dependencies>
+	<!--pluginRepositories>
+		<pluginRepository>
+			<id>codehaus snapshot repository</id>
+			<url>http://snapshots.repository.codehaus.org/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories-->
+	<build>
+		<!--finalName>hrinfo</finalName-->
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<modules>
+						<ejbModule>
+							<groupId>hrapp</groupId>
+							<artifactId>hrinfo-business</artifactId>
+						</ejbModule>
+						<webModule>
+							<groupId>hrapp</groupId>
+							<artifactId>hrinfo-web</artifactId>
+							<contextRoot>/hrapp</contextRoot>
+						</webModule>
+					</modules>
+					<jboss>
+             			<version>4</version>
+             			<loader-repository>hrapp:archive=hrinfo.ear</loader-repository>
+           			</jboss>					
+				</configuration>
+			</plugin>
+			<!--plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>0.3-SNAPSHOT</version>
+				<configuration>
+					<container>
+						<containerId>jboss4x</containerId>
+						<type>remote</type>
+					</container>
+				</configuration>
+			</plugin-->
+		</plugins>
+	</build>
+</project>

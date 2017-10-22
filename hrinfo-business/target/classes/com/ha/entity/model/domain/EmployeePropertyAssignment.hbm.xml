@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.EmployeePropertyAssignment" table="employeepropertyassignment">
+        <id name="propertyAssignmentDid"
+                    column="propertyAssignmentDid"
+                    type="java.lang.Long">
+                    <generator class="increment"/>
+        </id>
+
+        <property name="propertyTypeDid"
+                    column="propertyTypeDid"
+                    type="java.lang.Long"
+                    />
+        <property name="employeeDid"
+                    column="employeeDid"
+                    type="java.lang.Long"
+                    />
+        <property name="assignedDate"
+                    column="assignedDate"
+                    type="java.util.Date"
+                    />
+        <property name="returnedDate"
+                    column="returnedDate"
+                    type="java.util.Date"
+                    />
+        <property name="comment"
+                    column="comment"
+                    type="java.lang.String"
+                    />
+
+    </class>
+
+</hibernate-mapping>
+

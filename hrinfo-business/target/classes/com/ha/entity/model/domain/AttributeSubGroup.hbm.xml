@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.AttributeSubGroup" table="attributesubgroup">
+        <id name="attributeSubGroupDid"
+                    column="attributesubgroupdid"
+                    type="java.lang.Long">
+                   <generator class="increment"/>
+        </id>
+
+        <many-to-one
+                name="attributeGroup"
+                class="com.ha.entity.model.domain.AttributeGroup"
+                not-null="false"
+                >
+            <column name="attributegroupdid"/>
+        </many-to-one>
+
+        <property name="subgroupName"
+                    column="subgroupname"
+                    type="java.lang.String"/>
+                  
+        <property name="description"
+                    column="description"
+                    type="java.lang.String"/>
+
+        
+
+    </class>
+
+</hibernate-mapping>

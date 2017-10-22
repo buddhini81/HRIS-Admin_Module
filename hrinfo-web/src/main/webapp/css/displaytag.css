@@ -1,0 +1,171 @@
+table {
+	border: 0px solid #666;
+	margin: 0px 0 0px 0 !important;
+}
+
+th {
+	padding: 2px 4px 2px 4px !important;
+	text-align: left;
+	vertical-align: top;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+}
+
+td {
+	padding: 2px 4px 2px 4px !important;
+	text-align: left;
+	vertical-align: top;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+}
+
+thead tr {
+	background-color: #C0C0C0;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+		font-weight: bold;
+}
+
+th.sorted {
+	background-color: white;
+}
+
+th a,th a:visited {
+	color: black;
+}
+
+th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;
+}
+
+th.sortable a {
+	background-image: url(../img/arrow_off.png);
+}
+
+th.order1 a {
+	background-image: url(../img/arrow_down.png);
+}
+
+th.order2 a {
+	background-image: url(../img/arrow_up.png);
+}
+
+tr.odd {
+	background-color: #fff
+}
+
+tr.tableRowEven,tr.even {
+	background-color: #C0C0C0
+}
+
+div.exportlinks {
+	background-color: white;
+	border: none;
+	padding: 2px 4px 2px 4px;
+	margin: 2px 0 10px 0;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+}
+
+span.export {
+	padding: 0 5px 1px 15px;
+        display: inline-block;
+	cursor: pointer;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+}
+
+span.excel {
+	background-image: url(../img/ico_file_excel.png);
+        background-repeat: no-repeat;
+}
+
+span.csv {
+	background-image: url(../img/ico_file_csv.png);
+	background-repeat: no-repeat;
+
+}
+
+span.xml {
+	background-image: url(../img/ico_file_xml.png);
+	background-repeat: no-repeat;
+
+}
+
+span.pdf {
+	background-image: url(../img/ico_file_pdf.png);
+	background-repeat: no-repeat;
+
+}
+
+span.rtf {
+	background-image: url(../img/ico_file_rtf.png);
+        background-repeat: no-repeat;
+}
+
+span.pagebanner {
+	background-color: white;
+	border: none;
+	padding: 2px 4px 2px 4px;
+	margin-top: 10px;
+	display: block;
+	border-bottom: none;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+}
+
+span.pagelinks {
+	background-color: white;
+	border: none;
+	padding: 2px 4px 2px 4px;
+	display: block;
+	border-top: none;
+	margin-bottom: -5px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+}
+
+
+.group-1 {
+    font-weight:bold;
+    padding-bottom:10px;
+    border-top:1px solid black;
+}
+.group-2 {
+    font-style:italic;
+    border-top: 1px solid black;
+
+}
+.subtotal-sum, .grandtotal-sum {
+    font-weight:bold;
+    text-align:right;
+}
+.subtotal-header {
+    padding-bottom: 0px;
+    border-top: 1px solid white;
+}
+.subtotal-label, .grandtotal-label {
+    border-top: 1px solid white;
+    font-weight: bold;
+}
+.grouped-table tr.even {
+    background-color: #fff;
+}
+.grouped-table tr.odd {
+    background-color: #fff;
+}
+.grandtotal-row {
+    border-top: 2px solid black;
+}

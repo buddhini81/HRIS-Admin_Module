@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+    
+    <package name="admin" namespace="/admin" extends="struts-default">
+    	<interceptors>
+	      <interceptor name="SessionCheckInterceptor" class="interceptors.SessionCheckInterceptor"/>
+	      <interceptor-stack name="testSessionValidationStack">
+	      	<interceptor-ref name="SessionCheckInterceptor" />
+	        <interceptor-ref name="defaultStack" />
+	      </interceptor-stack>          
+		</interceptors>
+	
+	  	<global-results>
+	           <result name="sessionexpired">/login/login.jsp</result>
+	  	</global-results> 
+	  	
+	  	<action name="loadPageBasic" method="loadPage" class="com.ha.presentation.admin.UserAdminAction">
+    		<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/admin/user_management_basic.jsp</result>
+  			<result name="error">/admin/user_management_basic.jsp</result>
+  		</action>
+    	<action name="loadPage" method="loadPage" class="com.ha.presentation.admin.UserAdminAction">
+    		<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/admin/user_management.jsp</result>
+  			<result name="error">/admin/user_management.jsp</result>
+  		</action>
+  		<action name="saveUser" method="saveUser" class="com.ha.presentation.admin.UserAdminAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/admin/user_management.jsp</result>
+  			<result name="error">/admin/user_management.jsp</result>
+  			<result name="basic">/admin/user_management_basic.jsp</result>
+  			<result name="basic_error">/admin/user_management_basic.jsp</result>
+  			<param name="activeTab">add</param>
+  		</action>
+  		<action name="changePassword" method="changePassword" class="com.ha.presentation.admin.UserAdminAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/admin/user_management.jsp</result>
+  			<result name="error">/admin/user_management.jsp</result>
+  			<result name="basic">/admin/user_management_basic.jsp</result>
+  			<result name="basic_error">/admin/user_management_basic.jsp</result>
+  			<param name="activeTab">edit</param>
+  		</action>
+    </package>
+
+ 	<package name="login" namespace="/login" extends="struts-default">
+    	<action name="login" method="login" class="com.ha.presentation.LoginAction">
+  			<result name="success" type="redirectAction">
+	            <param name="actionName">loadPage</param>
+	            <param name="namespace" >/employee</param>
+        	</result>
+        	<result name="error">/login/login.jsp</result>
+        	<result name="input">/login/login.jsp</result>
+        	<result name="basic" type="redirectAction">
+	            <param name="actionName">loadPageBasic</param>
+	            <param name="namespace" >/employee</param>
+        	</result>
+  		</action>
+  		<action name="logout" method="logout" class="com.ha.presentation.LoginAction">
+  			<result name="success" type="redirect">/login/login.jsp</result>
+  		</action>
+    </package>
+    
+    <package name="employee" namespace="/employee" extends="struts-default">
+    	<interceptors>
+	      <interceptor name="SessionCheckInterceptor" class="interceptors.SessionCheckInterceptor"/>
+	      <interceptor-stack name="testSessionValidationStack">
+	      	<interceptor-ref name="SessionCheckInterceptor" />
+	        <interceptor-ref name="defaultStack" />
+	      </interceptor-stack>          
+		</interceptors>
+	
+	  	<global-results>
+	           <result name="sessionexpired">/login/login.jsp</result>
+	  	</global-results> 
+  	
+  		<action name="loadPageBasic" method="loadPage" class="com.ha.presentation.employee.EmployeeBaseAction">
+    		<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_info_tabview_basic.jsp</result>
+  			<result name="error">/employee/employeepages/employee_info_tabview_basic.jsp</result>
+  		</action>
+    	<action name="loadPage" method="loadPage" class="com.ha.presentation.employee.EmployeeBaseAction">
+    		<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<result name="error">/employee/employeepages/employee_info_tabview.jsp</result>
+  		</action>
+  		<action name="saveEmployeeData" method="saveEmployee" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success" type="redirectAction">
+  				<param name="actionName">viewEmployeeData</param>
+  			</result>
+  			<result name="error">/employee/employeepages/employee_info_tabview.jsp</result>
+  		</action>
+  		<action name="viewEmployeeData" method="viewEmployee" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+ 			<result name="success">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<result name="error">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<result name="basic">/employee/employeepages/employee_info_tabview_basic.jsp</result>
+  			<result name="basic_error">/employee/employeepages/employee_info_tabview_basic.jsp</result>
+  			<param name="activeTab">view</param>
+  		</action>
+  		<action name="editEmployeeData" method="editEmployee" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+ 			<result name="success">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<result name="error">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<param name="activeTab">add</param>
+  		</action>
+  		<action name="resetPage" method="resetPage" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+ 			<result name="success">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<result name="error">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<param name="activeTab">add</param>
+  		</action>
+  		<action name="searchEmployee" method="searchEmployee" class="com.ha.presentation.employee.EmployeeSearchAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<result name="error">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<result name="basic">/employee/employeepages/employee_info_tabview_basic.jsp</result>
+  			<result name="basic_error">/employee/employeepages/employee_info_tabview_basic.jsp</result>
+  			<param name="activeTab">search</param>
+  		</action>
+  		<action name="resetSearchPage" method="resetSearchPage" class="com.ha.presentation.employee.EmployeeSearchAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<result name="error">/employee/employeepages/employee_info_tabview.jsp</result>
+  			<result name="basic">/employee/employeepages/employee_info_tabview_basic.jsp</result>
+  			<result name="basic_error">/employee/employeepages/employee_info_tabview_basic.jsp</result>
+  			<param name="activeTab">search</param>
+  		</action>
+  		<action name="showEmployeeHistory" method="searchEmployeeHistory" class="com.ha.presentation.employee.EmployeeHistoryAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/view_employee_history.jsp</result>
+  			<result name="error">/employee/employeepages/view_employee_history.jsp</result>
+  		</action>
+  		<action name="loadEmployeeHistoryPage" method="loadEmployeeHistoryPage" class="com.ha.presentation.employee.EmployeeHistoryAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/add_employee_history.jsp</result>
+  			<result name="error">/employee/employeepages/add_employee_history.jsp</result>
+  		</action>
+  		<action name="saveEmployeeHistory" method="saveEmployeeHistory" class="com.ha.presentation.employee.EmployeeHistoryAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/add_employee_history.jsp</result>
+  			<result name="error">/employee/employeepages/add_employee_history.jsp</result>
+  		</action>
+  		<action name="deleteEmployeeHistory" method="deleteEmployeeHistory" class="com.ha.presentation.employee.EmployeeHistoryAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/view_employee_history.jsp</result>
+  			<result name="error">/employee/employeepages/view_employee_history.jsp</result>
+  		</action>
+  		
+  		<action name="loadEmployeeQualificationPage" method="loadEmployeeQualificationPage" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_qualifications.jsp</result>
+  			<result name="error">/employee/employeepages/employee_qualifications.jsp</result>
+  		</action>
+  		<action name="saveEmployeeQualification" method="saveEmployeeQualification" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_qualifications.jsp</result>
+  			<result name="error">/employee/employeepages/employee_qualifications.jsp</result>
+  		</action>
+  		<action name="editEmployeeQualification" method="editEmployeeQualification" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_qualifications.jsp</result>
+  			<result name="error">/employee/employeepages/employee_qualifications.jsp</result>
+  		</action>
+  		<action name="deleteEmployeeQualification" method="deleteEmployeeQualification" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_qualifications.jsp</result>
+  			<result name="error">/employee/employeepages/employee_qualifications.jsp</result>
+  		</action>
+  		
+  		<action name="loadEmployeeSkillPage" method="loadEmployeeSkillPage" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_skill.jsp</result>
+  			<result name="error">/employee/employeepages/employee_skill.jsp</result>
+  		</action>
+  		<action name="saveEmployeeSkill" method="saveEmployeeSkill" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_skill.jsp</result>
+  			<result name="error">/employee/employeepages/employee_skill.jsp</result>
+  		</action>
+  		<action name="editEmployeeSkill" method="editEmployeeSkill" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_skill.jsp</result>
+  			<result name="error">/employee/employeepages/employee_skill.jsp</result>
+  		</action>
+  		<action name="deleteEmployeeSkill" method="deleteEmployeeSkill" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_skill.jsp</result>
+  			<result name="error">/employee/employeepages/employee_skill.jsp</result>
+  		</action>
+  		<action name="loadPropertyAssignmentPage" method="loadPropertyAssignmentPage" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_property_assignment.jsp</result>
+  			<result name="error">/employee/employeepages/employee_property_assignment.jsp</result>
+  		</action>
+  		<action name="savePropertyAssignment" method="savePropertyAssignment" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_property_assignment.jsp</result>
+  			<result name="error">/employee/employeepages/employee_property_assignment.jsp</result>
+  		</action>
+  		<action name="editPropertyAssignment" method="editPropertyAssignment" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_property_assignment.jsp</result>
+  			<result name="error">/employee/employeepages/employee_property_assignment.jsp</result>
+  		</action>
+  		<action name="deletePropertyAssignment" method="deletePropertyAssignment" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_property_assignment.jsp</result>
+  			<result name="error">/employee/employeepages/employee_property_assignment.jsp</result>
+  		</action>
+  		<action name="returnCompanyProperty" method="returnCompanyProperty" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_property_assignment.jsp</result>
+  			<result name="error">/employee/employeepages/employee_property_assignment.jsp</result>
+  		</action>
+  		<action name="loadResignationAndClearence" method="loadResignationAndClearence" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_resignation.jsp</result>
+  			<result name="error">/employee/employeepages/employee_resignation.jsp</result>
+  		</action>
+  		<action name="resignationAndClearence" method="resignationAndClearence" class="com.ha.presentation.employee.EmployeeAction">
+  			<interceptor-ref name="testSessionValidationStack"/>
+  			<result name="success">/employee/employeepages/employee_resignation.jsp</result>
+  			<result name="error">/employee/employeepages/employee_resignation.jsp</result>
+  		</action>
+    </package>
+    
+    <package name="reports" namespace="/reports" extends="struts-default,json-default">  
+    		<interceptors>     
+				<interceptor name="exportParamModify" 
+					class="interceptors.ModifyParametersForExportInterceptor"> 
+				</interceptor>     
+				<interceptor-stack name="myStack">         
+					<interceptor-ref name="exportParamModify" />         
+					<interceptor-ref name="defaultStack" />     
+				</interceptor-stack>
+				 
+				<interceptor name="SessionCheckInterceptor" class="interceptors.SessionCheckInterceptor"/>
+	      		<interceptor-stack name="testSessionValidationStack">
+	      			<interceptor-ref name="SessionCheckInterceptor" />
+	        		<interceptor-ref name="defaultStack" />
+	      		</interceptor-stack>     
+			</interceptors>  
+			
+			<global-results>
+	           <result name="sessionexpired">/login/login.jsp</result>
+	  		</global-results>     
+			
+            <action name="loadReport" method="loadReport" class="com.ha.presentation.NewReportAction">
+            	<interceptor-ref name="testSessionValidationStack"/>
+                <result name="success">/reports/reports.jsp</result>
+  				<result name="error">/reports/reports.jsp</result>
+            </action>
+            <action name="searchReport" method="searchReport" class="com.ha.presentation.NewReportAction">
+            	<interceptor-ref name="testSessionValidationStack"/>
+                <interceptor-ref name="myStack"></interceptor-ref>          
+                <result name="success">/reports/reports.jsp</result>
+  				<result name="error">/reports/reports.jsp</result>
+            </action> 
+            <action name="resetPage" method="resetPage" class="com.ha.presentation.NewReportAction">
+  				<interceptor-ref name="testSessionValidationStack"/>
+ 				<result name="success">/reports/reports.jsp</result>
+  				<result name="error">/reports/reports.jsp</result>
+  			</action>
+            <action name="testAjax" method="testAjax" class="com.ha.presentation.NewReportAction">
+               <interceptor-ref name="testSessionValidationStack"/>
+               <result type="json"></result>
+            </action> 
+            
+   </package>
+   
+</struts>

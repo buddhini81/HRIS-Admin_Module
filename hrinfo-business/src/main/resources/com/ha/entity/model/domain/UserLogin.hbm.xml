@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.UserLogin" table="userlogin">
+        <id name="userLoginDid"
+                    column="userlogindid"
+                    type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+
+        <property name="userName"
+                    column="username"
+                    type="java.lang.String"
+                    />
+        <property name="password"
+                    column="password"
+                    type="java.lang.String"
+                    />
+        <property name="userRoleDid"
+                    column="userroledid"
+                    type="java.lang.Long"
+                    />
+        <property name="LastSucessfulLoginDate"
+                    column="lastsuccessfullogindate"
+                    type="java.util.Date"
+                    />
+       <many-to-one
+                name="company"
+                class="com.ha.entity.model.domain.Company"
+                not-null="true"
+                lazy="false">
+            <column name="companydid"/>
+       </many-to-one>
+
+    </class>
+
+</hibernate-mapping>
+

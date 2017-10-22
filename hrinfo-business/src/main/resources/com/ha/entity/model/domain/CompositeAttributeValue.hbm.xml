@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.CompositeAttributeValue" table="compositeattributevalue">
+        <id name="compositeAttributeValueDid"
+                    column="compositeattributevaluedid"
+                    type="java.lang.Long">
+                   <generator class="increment"/>
+        </id>
+
+		<many-to-one
+                name="compositeAddedAttribute"
+                class="com.ha.entity.model.domain.CompositeAddedAttribute"
+                not-null="false"
+                >
+            <column name="compositeaddedattributedid"/>
+        </many-to-one>
+
+		<many-to-one
+                name="valueType"
+                class="com.ha.entity.model.domain.ValueType"
+                not-null="true"
+                >
+            <column name="valuetypedid"/>
+        </many-to-one>
+        
+        <property name="attributeDistributionDid"
+                    column="attributeDistributionDid"
+                    type="java.lang.Long"
+                    />
+                    
+        <property name="attributeValue"
+                    column="attributevalue"
+                    type="java.lang.String"
+                    />
+
+    </class>
+
+</hibernate-mapping>
+

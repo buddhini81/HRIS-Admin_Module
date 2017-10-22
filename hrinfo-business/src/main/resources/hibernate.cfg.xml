@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.datasource">java:/HRDS</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="transaction.factory_class">org.hibernate.transaction.JTATransactionFactory</property>
+        <property name="transaction.manager_lookup_class">
+            org.hibernate.transaction.JBossTransactionManagerLookup
+        </property>
+        <property name="current_session_context_class">jta</property>
+        <property name="hibernate.show_sql">true</property>
+
+    <!-- mapping files -->
+        <mapping resource="com/ha/entity/model/domain/SiteMember.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/SiteMemberLogin.hbm.xml"/>
+
+        <mapping resource="com/ha/entity/model/domain/UserLogin.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/UserFunction.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/ContractType.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/SingleAddedAttribute.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/CompositeAddedAttribute.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/CompositeAttributeValue.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/AttributeGroup.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/AttributeSubGroup.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/Company.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/Department.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/DepartmentAssignment.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/Employee.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/ValueType.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/EmployeeAllowance.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/EmployeeHistory.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/EmployeeQualification.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/EmployeeSkill.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/EmployeePropertyAssignment.hbm.xml"/>
+        <mapping resource="com/ha/entity/model/domain/EmployeeClearence.hbm.xml"/>
+
+    </session-factory>
+</hibernate-configuration>

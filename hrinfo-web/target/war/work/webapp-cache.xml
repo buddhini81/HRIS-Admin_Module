@@ -1,0 +1,334 @@
+<webapp-structure>
+  <registeredFiles>
+    <entry>
+      <string>currentBuild</string>
+      <path-set>
+        <pathsSet class="linked-hash-set">
+          <string>admin/add_new_user.jsp</string>
+          <string>admin/change_password.jsp</string>
+          <string>admin/user_management.jsp</string>
+          <string>admin/user_management_basic.jsp</string>
+          <string>confirmation_popup.jsp</string>
+          <string>css/commonstyles/common.css</string>
+          <string>css/displaytag.css</string>
+          <string>css/jquery.loadmask.css</string>
+          <string>customstyles/customstyls.css</string>
+          <string>employee/employeepages/add_employee_details.jsp</string>
+          <string>employee/employeepages/add_employee_history.jsp</string>
+          <string>employee/employeepages/employee_info_tabview.jsp</string>
+          <string>employee/employeepages/employee_info_tabview_basic.jsp</string>
+          <string>employee/employeepages/employee_property_assignment.jsp</string>
+          <string>employee/employeepages/employee_qualifications.jsp</string>
+          <string>employee/employeepages/employee_resignation.jsp</string>
+          <string>employee/employeepages/employee_search.jsp</string>
+          <string>employee/employeepages/employee_skill.jsp</string>
+          <string>employee/employeepages/test_display.jsp</string>
+          <string>employee/employeepages/view_employee_details.jsp</string>
+          <string>employee/employeepages/view_employee_history.jsp</string>
+          <string>images/Add (80x80).png</string>
+          <string>images/Add (small).png</string>
+          <string>images/Add new EMP (80x80).png</string>
+          <string>images/Add new EMP (small).png</string>
+          <string>images/add.gif</string>
+          <string>images/add_history.jpg</string>
+          <string>images/Admin (80x80).png</string>
+          <string>images/Admin (small).png</string>
+          <string>images/alert.jpg</string>
+          <string>images/cal.gif</string>
+          <string>images/Cancel (80x80).png</string>
+          <string>images/Cancel (small).png</string>
+          <string>images/closebox.png</string>
+          <string>images/close_comment.jpg</string>
+          <string>images/comp_property.jpg</string>
+          <string>images/delete.jpg</string>
+          <string>images/edit.gif</string>
+          <string>images/Experience (80x80).png</string>
+          <string>images/Experience (small).png</string>
+          <string>images/GEN Report (80x80).png</string>
+          <string>images/GEN Report (small).png</string>
+          <string>images/history.jpg</string>
+          <string>images/Home (80x80).png</string>
+          <string>images/Home (small).png</string>
+          <string>images/Info (80x80).png</string>
+          <string>images/Info (small).png</string>
+          <string>images/open_comment.jpg</string>
+          <string>images/Print (80x80).png</string>
+          <string>images/Print (small).png</string>
+          <string>images/Qualification (80x80).png</string>
+          <string>images/Qualification (small).png</string>
+          <string>images/qualifications.jpg</string>
+          <string>images/Reports (80x80).png</string>
+          <string>images/Reports (small).png</string>
+          <string>images/resign.jpg</string>
+          <string>images/Resigned (80x80).png</string>
+          <string>images/Resigned (small).png</string>
+          <string>images/return_prop.jpg</string>
+          <string>images/Save (80x80).png</string>
+          <string>images/Save (small).png</string>
+          <string>images/save_success.gif</string>
+          <string>images/skills.jpg</string>
+          <string>images/tab_image.jpg</string>
+          <string>images/Training (80x80).png</string>
+          <string>images/Training (small).png</string>
+          <string>images/user.jpg</string>
+          <string>images/Users (80x80).png</string>
+          <string>images/Users (small).png</string>
+          <string>images/View (80x80).png</string>
+          <string>images/View (small).png</string>
+          <string>images/view.jpg</string>
+          <string>img/arrow_down.png</string>
+          <string>img/arrow_off.png</string>
+          <string>img/arrow_up.png</string>
+          <string>img/ico_file_csv.png</string>
+          <string>img/ico_file_excel.png</string>
+          <string>img/ico_file_pdf.png</string>
+          <string>img/ico_file_rtf.png</string>
+          <string>img/ico_file_xml.png</string>
+          <string>img/paginazione.png</string>
+          <string>img/paginazione_ahead.png</string>
+          <string>img/paginazione_back.png</string>
+          <string>js/AC_RunActiveContent.js</string>
+          <string>js/adminscripts/user.js</string>
+          <string>js/commonscripts/common.js</string>
+          <string>js/coolfieldset/css/jquery.coolfieldset.css</string>
+          <string>js/coolfieldset/images/collapsed.gif</string>
+          <string>js/coolfieldset/images/expanded.gif</string>
+          <string>js/coolfieldset/js/jquery.coolfieldset.js</string>
+          <string>js/datetimepicker.js</string>
+          <string>js/displayTagAjax.js</string>
+          <string>js/employeescripts/employee.js</string>
+          <string>js/fileupload/fileuploadfield.css</string>
+          <string>js/fileupload/FileUploadField.js</string>
+          <string>js/jquery-1.9.1.js</string>
+          <string>js/jquery-1.9.1.min.js</string>
+          <string>js/jquery-ui.js</string>
+          <string>js/jquery-ui.min.js</string>
+          <string>js/jquery.loadmask.js</string>
+          <string>js/messagebox/css/jquery.alerts.css</string>
+          <string>js/messagebox/images/help.gif</string>
+          <string>js/messagebox/images/important.gif</string>
+          <string>js/messagebox/images/info.gif</string>
+          <string>js/messagebox/images/title.gif</string>
+          <string>js/messagebox/js/jquery.alerts.js</string>
+          <string>js/messagebox/js/jquery.js</string>
+          <string>js/messagebox/js/jquery.ui.draggable.js</string>
+          <string>js/reportscripts/report.js</string>
+          <string>js/searchscripts/search.js</string>
+          <string>login/login.jsp</string>
+          <string>reports/reports.jsp</string>
+          <string>struts2_custom_templates/css_xhtml/optiontransferselect.ftl</string>
+          <string>struts2_custom_templates/simple/common-attributes.ftl</string>
+          <string>struts2_custom_templates/simple/css.ftl</string>
+          <string>struts2_custom_templates/simple/dynamic-attributes.ftl</string>
+          <string>struts2_custom_templates/simple/optgroup.ftl</string>
+          <string>struts2_custom_templates/simple/optiontransferselect.ftl</string>
+          <string>struts2_custom_templates/simple/scripting-events.ftl</string>
+          <string>struts2_custom_templates/simple/select.ftl</string>
+          <string>struts2_custom_templates/xhtml/optiontransferselect.ftl</string>
+          <string>test.jsp</string>
+          <string>WEB-INF/classes/displaytag.properties</string>
+          <string>WEB-INF/classes/logging.properties</string>
+          <string>WEB-INF/classes/struts.xml</string>
+          <string>WEB-INF/lib/antlr-2.7.2.jar</string>
+          <string>WEB-INF/lib/antlr-2.7.6.jar</string>
+          <string>WEB-INF/lib/asm-attrs.jar</string>
+          <string>WEB-INF/lib/asm.jar</string>
+          <string>WEB-INF/lib/bsf-2.3.0.jar</string>
+          <string>WEB-INF/lib/cglib-2.1.3.jar</string>
+          <string>WEB-INF/lib/commons-beanutils-1.8.0.jar</string>
+          <string>WEB-INF/lib/commons-chain-1.2.jar</string>
+          <string>WEB-INF/lib/commons-collections-3.1.jar</string>
+          <string>WEB-INF/lib/commons-digester-2.0.jar</string>
+          <string>WEB-INF/lib/commons-fileupload-1.2.2.jar</string>
+          <string>WEB-INF/lib/commons-io-2.0.1.jar</string>
+          <string>WEB-INF/lib/commons-lang-2.3.jar</string>
+          <string>WEB-INF/lib/commons-lang-2.4.jar</string>
+          <string>WEB-INF/lib/commons-lang-2.4.jar.zip</string>
+          <string>WEB-INF/lib/commons-lang3-3.1.jar</string>
+          <string>WEB-INF/lib/commons-logging-1.1.1.jar</string>
+          <string>WEB-INF/lib/commons-validator-1.3.1.jar</string>
+          <string>WEB-INF/lib/displaytag-1.2.jar</string>
+          <string>WEB-INF/lib/displaytag-export-poi-1.2.jar</string>
+          <string>WEB-INF/lib/ehcache-1.2.jar</string>
+          <string>WEB-INF/lib/ezmorph-1.0.jar</string>
+          <string>WEB-INF/lib/freemarker-2.3.19.jar</string>
+          <string>WEB-INF/lib/itext-1.3.jar</string>
+          <string>WEB-INF/lib/javassist.jar</string>
+          <string>WEB-INF/lib/jcl104-over-slf4j-1.4.2.jar</string>
+          <string>WEB-INF/lib/jdbc2_0-stdext.jar</string>
+          <string>WEB-INF/lib/joda-time-2.1.jar</string>
+          <string>WEB-INF/lib/json-lib-2.3-jdk15.jar</string>
+          <string>WEB-INF/lib/json-org.jar</string>
+          <string>WEB-INF/lib/jstl-1.0.2.jar</string>
+          <string>WEB-INF/lib/jstl-1.1.2.jar</string>
+          <string>WEB-INF/lib/jta.jar</string>
+          <string>WEB-INF/lib/log4j-1.2.13.jar</string>
+          <string>WEB-INF/lib/mysql-connector-java-5.1.14.jar</string>
+          <string>WEB-INF/lib/ognl-3.0.5.jar</string>
+          <string>WEB-INF/lib/oro-2.0.8.jar</string>
+          <string>WEB-INF/lib/poi-3.2-FINAL.jar</string>
+          <string>WEB-INF/lib/slf4j-api-1.4.2.jar</string>
+          <string>WEB-INF/lib/slf4j-log4j12-1.4.2.jar</string>
+          <string>WEB-INF/lib/standard-1.0.2.jar</string>
+          <string>WEB-INF/lib/standard-1.0.6.jar</string>
+          <string>WEB-INF/lib/struts2-core-2.3.4.1.jar</string>
+          <string>WEB-INF/lib/struts2-dojo-plugin-2.3.4.1.jar</string>
+          <string>WEB-INF/lib/struts2-jquery-plugin-2.5.3.jar</string>
+          <string>WEB-INF/lib/struts2-json-plugin-2.3.4.1.jar</string>
+          <string>WEB-INF/lib/xwork-core-2.3.4.1.jar</string>
+          <string>WEB-INF/tlds/acces-control-tag.tld</string>
+          <string>WEB-INF/web.xml</string>
+          <string>WEB-INF/classes/ApplicationResources.properties</string>
+          <string>WEB-INF/classes/com/ha/presentation/admin/UserAdminAction.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/ajax/AjaxCommandHandler.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/ajax/AjaxCommandHandlerFactory.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/ajax/AjaxFrontController.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/ajax/AjaxResponse.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/ajax/HorseAppAjaxController.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/ajax/HorseAppAjaxHelper.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/ajax/HorseAppCommandHandler.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/employee/EmployeeAction.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/employee/EmployeeBaseAction.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/employee/EmployeeHistoryAction.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/employee/EmployeeSearchAction.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/LoginAction.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/NewReportAction.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/taghandler/AccessRightsTagHandler.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/taghandler/MenuTagHandler.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/util/PasswordService.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/util/PresentationConstants.class</string>
+          <string>WEB-INF/classes/com/ha/presentation/util/SelectBoxDataHolder.class</string>
+          <string>WEB-INF/classes/decorators/EmployeeSearchResultsDecorator.class</string>
+          <string>WEB-INF/classes/decorators/HistoryResultsDecorator.class</string>
+          <string>WEB-INF/classes/decorators/NicePdfExport$PdfGenerationException.class</string>
+          <string>WEB-INF/classes/decorators/NicePdfExport.class</string>
+          <string>WEB-INF/classes/decorators/ReportResultsDecorator.class</string>
+          <string>WEB-INF/classes/interceptors/ModifyParametersForExportInterceptor.class</string>
+          <string>WEB-INF/classes/interceptors/SessionCheckInterceptor.class</string>
+          <string>WEB-INF/lib/slf4j-api-1.5.8.jar</string>
+          <string>WEB-INF/lib/json-20090211.jar</string>
+          <string>WEB-INF/lib/commons-beanutils-1.7.0.jar</string>
+        </pathsSet>
+      </path-set>
+    </entry>
+  </registeredFiles>
+  <dependenciesInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>hrapp</groupId>
+        <artifactId>hrinfo-business</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <type>ejb</type>
+        <scope>provided</scope>
+        <exclusions/>
+        <optional>false</optional>
+        <modelEncoding>UTF-8</modelEncoding>
+      </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>com.opensymphony</groupId>
+        <artifactId>xwork-core</artifactId>
+        <version>2.1.6</version>
+        <type>jar</type>
+        <scope>provided</scope>
+        <exclusions>
+          <org.apache.maven.model.Exclusion>
+            <artifactId>hibernate</artifactId>
+            <groupId>org.hibernate</groupId>
+            <modelEncoding>UTF-8</modelEncoding>
+          </org.apache.maven.model.Exclusion>
+        </exclusions>
+        <optional>false</optional>
+        <modelEncoding>UTF-8</modelEncoding>
+      </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>org.apache.struts</groupId>
+        <artifactId>struts2-core</artifactId>
+        <version>2.3.4.1</version>
+        <type>jar</type>
+        <scope>provided</scope>
+        <exclusions>
+          <org.apache.maven.model.Exclusion>
+            <artifactId>hibernate</artifactId>
+            <groupId>org.hibernate</groupId>
+            <modelEncoding>UTF-8</modelEncoding>
+          </org.apache.maven.model.Exclusion>
+        </exclusions>
+        <optional>false</optional>
+        <modelEncoding>UTF-8</modelEncoding>
+      </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>org.jboss.spec</groupId>
+        <artifactId>jboss-javaee-6.0</artifactId>
+        <version>1.0.0.Final</version>
+        <type>pom</type>
+        <scope>provided</scope>
+        <exclusions>
+          <org.apache.maven.model.Exclusion>
+            <artifactId>hibernate</artifactId>
+            <groupId>org.hibernate</groupId>
+            <modelEncoding>UTF-8</modelEncoding>
+          </org.apache.maven.model.Exclusion>
+        </exclusions>
+        <optional>false</optional>
+        <modelEncoding>UTF-8</modelEncoding>
+      </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20090211</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions>
+          <org.apache.maven.model.Exclusion>
+            <artifactId>hibernate</artifactId>
+            <groupId>org.hibernate</groupId>
+            <modelEncoding>UTF-8</modelEncoding>
+          </org.apache.maven.model.Exclusion>
+        </exclusions>
+        <optional>false</optional>
+        <modelEncoding>UTF-8</modelEncoding>
+      </dependency>
+      <targetFileName>json-20090211.jar</targetFileName>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>displaytag</groupId>
+        <artifactId>displaytag</artifactId>
+        <version>1.2</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions>
+          <org.apache.maven.model.Exclusion>
+            <artifactId>hibernate</artifactId>
+            <groupId>org.hibernate</groupId>
+            <modelEncoding>UTF-8</modelEncoding>
+          </org.apache.maven.model.Exclusion>
+        </exclusions>
+        <optional>false</optional>
+        <modelEncoding>UTF-8</modelEncoding>
+      </dependency>
+      <targetFileName>displaytag-1.2.jar</targetFileName>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>2.1</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions/>
+        <optional>false</optional>
+        <modelEncoding>UTF-8</modelEncoding>
+      </dependency>
+      <targetFileName>joda-time-2.1.jar</targetFileName>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+  </dependenciesInfo>
+</webapp-structure>

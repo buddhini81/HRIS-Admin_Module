@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.Employee" table="employee">
+        <id name="employeeDid"
+                    column="employeeDid"
+                    type="java.lang.Long">
+                    <generator class="increment"/>
+        </id>
+
+        <property name="employeeNo"
+                    column="employeeNumber"
+                    type="java.lang.String"
+                    />
+        <property name="epfNo"
+                    column="EPFNumber"
+                    type="java.lang.String"
+                    />
+        <property name="companyEpfNo"
+                    column="companyEPFNumber"
+                    type="java.lang.String"
+                    />
+        <property name="companyDid"
+                    column="companyDid"
+                    type="java.lang.Long"
+                    />
+        <property name="designation"
+                    column="designation"
+                    type="java.lang.String"
+                    />
+        <property name="nicNo"
+                    column="NICNumber"
+                    type="java.lang.String"
+                    />
+        <property name="firstName"
+                    column="firstName"
+                    type="java.lang.String"
+                    />
+        <property name="middleName"
+                    column="middleName"
+                    type="java.lang.String"
+                    />
+        <property name="lastName"
+                    column="lastName"
+                    type="java.lang.String"
+                    />
+        <property name="addressLine1"
+                    column="addressline1"
+                    type="java.lang.String"
+                    />
+        <property name="addressLine2"
+                    column="addressline2"
+                    type="java.lang.String"
+                    />
+        <property name="addressLine3"
+                    column="addressline3"
+                    type="java.lang.String"
+                    />
+        <property name="homePhoneNo"
+                    column="homePhoneNumber"
+                    type="java.lang.String"
+                    />
+        <property name="mobileNo"
+                    column="mobileNumber"
+                    type="java.lang.String"
+                    />
+        <property name="gender"
+                    column="gender"
+                    type="java.lang.String"
+                    />
+        <property name="dateOfBirth"
+                    column="DOB"
+                    type="java.util.Date"
+                    />
+         <property name="age"
+                    column="age"
+                    type="java.lang.Integer"
+                    />
+        <property name="email"
+                    column="email"
+                    type="java.lang.String"
+                    />
+        <property name="maritalStatus"
+                    column="maritalStatus"
+                    type="java.lang.String"
+                    />
+        <property name="dateJoined"
+                    column="dateJoined"
+                    type="java.util.Date"
+                    />
+        <property name="dueConfirmationDate"
+                    column="dueConfirmationDate"
+                    type="java.util.Date"
+                    />
+       <property name="confirmationDate"
+                    column="confirmationDate"
+                    type="java.util.Date"
+                    />
+       <property name="drivingLicenseNo"
+                    column="drvLicenceNumber"
+                    type="java.lang.String"
+                    />
+       <property name="passportNo"
+                    column="passportNumber"
+                    type="java.lang.String"
+                    />
+       <property name="resignedDate"
+                    column="resignedDate"
+                    type="java.util.Date"
+                    />
+       <property name="otherContractType"
+                    column="otherContracType"
+                    type="java.lang.String"
+                    />
+       <property name="basicSalary"
+                    column="basicsalary"
+                    type="java.math.BigDecimal"
+                    />
+       <many-to-one
+                name="contractType"
+                class="com.ha.entity.model.domain.ContractType"
+                not-null="false"
+                >
+            <column name="contracttypedid"/>
+        </many-to-one>
+
+
+
+    </class>
+
+</hibernate-mapping>
+

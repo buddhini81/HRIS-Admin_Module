@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.EmployeeClearence" table="employeeclearence">
+        <id name="employeeClearenceDid"
+                    column="employeeClearenceDid"
+                    type="java.lang.Long">
+                    <generator class="increment"/>
+        </id>
+
+        <property name="employeeDid"
+                    column="employeeDid"
+                    type="java.lang.Long"
+                    />
+        <property name="resignationAcceptanceIssued"
+                    column="resigAcceptanceIssued"
+                    type="java.lang.Boolean"
+                    />
+        <property name="workHandedOver"
+                    column="workHandedOver"
+                    type="java.lang.Boolean"
+                    />
+        <property name="companyPropertyHandedOver"
+                    column="companyPropertyHandedOver"
+                    type="java.lang.Boolean"
+                    />
+		<property name="financialClearenceDone"
+                    column="financialClearenceDone"
+                    type="java.lang.Boolean"
+                    />
+        <property name="serviceLetterIssued"
+                    column="serviceLetterIssued"
+                    type="java.lang.Boolean"
+                    />
+        <property name="bCardHandedOver"
+                    column="bcardHandedOver"
+                    type="java.lang.Boolean"
+                    />
+         <property name="grativityPaid"
+                    column="grativityPaid"
+                    type="java.lang.Boolean"
+                    />
+    </class>
+
+</hibernate-mapping>
+

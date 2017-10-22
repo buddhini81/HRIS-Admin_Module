@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.EmployeeHistory" table="employeehistory">
+        <id name="historyDid"
+                    column="historydid"
+                    type="java.lang.Long">
+                    <generator class="increment"/>
+        </id>
+
+        <property name="employeeDid"
+                    column="employeeDid"
+                    type="java.lang.Long"
+                    />
+        <property name="note"
+                    column="note"
+                    type="java.lang.String"
+                    />
+        <property name="historyDate"
+                    column="historydate"
+                    type="java.util.Date"
+                    />
+
+    </class>
+
+</hibernate-mapping>
+

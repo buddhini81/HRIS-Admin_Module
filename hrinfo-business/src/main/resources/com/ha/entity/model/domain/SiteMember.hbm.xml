@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.SiteMember" table="sitemember">
+        <id name="siteMemberDid" 
+                    column="sitememberdid"
+                    type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+
+        <property name="firstName" 
+                    column="firstname"
+                    type="java.lang.String"
+                    />
+        <property name="lastName" 
+                    column="lastname"
+                    type="java.lang.String"
+                    />
+        <property name="company" 
+                    column="company"
+                    type="java.lang.String"
+                    />
+        <property name="phoneNumber" 
+                    column="phoneno"
+                    type="java.lang.String"
+                    />
+        <property name="mobileNumber" 
+                    column="mobileo"
+                    type="java.lang.String"
+                    />
+        <property name="faxNumber" 
+                    column="faxno"
+                    type="java.lang.String"
+                    />
+        <property name="email" 
+                    column="email"
+                    type="java.lang.String"
+                    />
+        <property name="approvalStatus" 
+                    column="approvalstatus"
+                    type="java.lang.Integer"
+                    />
+                   
+    </class>
+
+</hibernate-mapping>
+

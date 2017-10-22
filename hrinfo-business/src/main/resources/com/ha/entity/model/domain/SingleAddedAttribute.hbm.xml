@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.SingleAddedAttribute" table="singleaddedattribute">
+        <id name="singleAddedAttributeDid"
+                    column="singleaddedattributedid"
+                    type="java.lang.Long">
+                   <generator class="increment"/>
+        </id>
+
+		<property name="attributeGroupDid"
+                    column="attributegroupdid"
+                    type="java.lang.Long"
+                    />
+
+		<property name="attributeSubGroupDid"
+                    column="attributesubgroupdid"
+                    type="java.lang.Long"
+                    />
+                    
+        <property name="attributeDistributionDid"
+                    column="attributeDistributionDid"
+                    type="java.lang.Long"
+                    />
+
+        <many-to-one
+                name="valueType"
+                class="com.ha.entity.model.domain.ValueType"
+                not-null="true"
+                >
+            <column name="valuetypedid"/>
+        </many-to-one>
+
+        <property name="did"
+                    column="DID"
+                    type="java.lang.Long"
+                    />
+        <property name="tObject"
+                    column="tObject"
+                    type="java.lang.String"/>
+
+        <property name="attribValue"
+                    column="attributevalue"
+                    type="java.lang.String"
+                    />
+
+    </class>
+
+</hibernate-mapping>
+

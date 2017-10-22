@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.Department" table="department">
+        <id name="departmentDid"
+                    column="departmentDid"
+                    type="java.lang.Long">
+        </id>
+
+        <many-to-one
+                name="company"
+                class="com.ha.entity.model.domain.Company"
+                not-null="true"
+                >
+            <column name="companyDid"/>
+        </many-to-one>
+        
+        <property name="departmentCode"
+                    column="departmentCode"
+                    type="java.lang.String"
+                    />
+        <property name="numberOfEmployees"
+                    column="numberOfEmployees"
+                    type="java.lang.Long"
+                    />
+
+    </class>
+
+</hibernate-mapping>
+

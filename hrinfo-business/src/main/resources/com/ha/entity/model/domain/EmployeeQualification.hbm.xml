@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.EmployeeQualification" table="employeequalification">
+        <id name="qualificationDid"
+                    column="qualificationDid"
+                    type="java.lang.Long">
+                    <generator class="increment"/>
+        </id>
+
+        <property name="qualificationTypeDid"
+                    column="qualificationTypeDid"
+                    type="java.lang.Long"
+                    />
+        <property name="employeeDid"
+                    column="employeeDid"
+                    type="java.lang.Long"
+                    />
+        <property name="description"
+                    column="description"
+                    type="java.lang.String"
+                    />
+         <property name="yearObtained"
+                    column="yearObtained"
+                    type="java.lang.Integer"
+                    />
+         <property name="comment"
+                    column="comment"
+                    type="java.lang.String"
+                    />
+
+    </class>
+
+</hibernate-mapping>
+

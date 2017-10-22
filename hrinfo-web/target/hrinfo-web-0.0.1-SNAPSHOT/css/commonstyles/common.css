@@ -1,0 +1,85 @@
+/* 
+    Document   : common
+    Created on : May 1, 2011, 8:14:19 AM
+    Author     : Buddhini
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/*Common styles*/
+.all_heading1_style {	color: #FF8000;
+	font-size: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.all_heading2_style {
+	color: #FF8000;
+	font-size: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.all_text_style_green {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #4AB915; }
+.all_text_style_orange {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #FF8000; }
+.dyna_textbox_style {border:0; color: #FF8000; font-weight: bold;}
+.page_title_text_style {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: black; }
+
+.select_style_black {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: black;width:20em;height:15em;}
+.select_style_black2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: black;width:10em; }
+.common_style_black {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: black;width:10em; }
+.common_style_black_required {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: black;width:10em;border: 1px solid #7f9db9;border-bottom: 1px solid red; }
+.datebox_style_black {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: black;width:20em; }
+.datebox_style_black_required {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: black;width:20em;border: 1px solid #7f9db9;border-bottom: 1px solid red; }
+.button_style {vertical-align: sub;font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: black;background-color: #C0C0C0;width:10em;}
+.hidden_textbox_style {border:0; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: black;width:10em; }
+
+.styleRequired {
+    border: 1px solid #7f9db9;
+    border-bottom: 1px solid red;
+}
+
+.selectStyleRequired {
+  border-bottom: 1px solid red;
+  filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1,color=#FF0000);
+  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: black;width:10em;
+}
+
+.radioStyleRequired {
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1,color=#FF0000);
+}
+
+.styleError {color: red;font-family:Verdana, Arial, Helvetica, sans-serif;font-size: xx-small;font-weight: bold;}
+
+
+
+/*Report styles*/
+.report_heading1_style {
+	color: #FF8000;
+	font-size: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+
+.div_comment {
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    border: 1px solid gray;
+    font: medium -moz-fixed;
+    font: -webkit-small-control;
+    height: 30px;
+    overflow: auto;
+    padding: 2px;
+    resize: both;
+    width: 150px;
+    position: absolute;
+    z-index:999;
+    background-color: silver;
+}
+

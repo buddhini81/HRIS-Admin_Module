@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+            <hibernate-mapping>
+                <class name="com.ha.entity.model.domain.Student" table="students">
+                    <id name="studentId" 
+                    column="student_id"
+                    type="java.lang.Long">
+                        <generator class="increment"/>
+                    </id>
+
+                    <property name="firstName" column="first_name"/>
+                    <property name="lastName" column="last_name"/>
+                    <property name="address" column="address"/>
+                    <!--<set name="courses" table="student_courses">
+                        <key column="student_id"/>
+                        <many-to-many column="course_id" class="com.icesoft.icefaces.tutorial.crud.hibernate.Course"/>
+                    </set>-->
+                </class>
+
+            </hibernate-mapping>
+

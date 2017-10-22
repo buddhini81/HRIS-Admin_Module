@@ -1,0 +1,29 @@
+/* 
+    Document   : customstyls
+    Created on : Nov 6, 2010, 8:17:38 AM
+    Author     : Buddhini
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.required{
+	border-color:#7F9DB9 #7F9DB9 red;
+	border-style:solid;
+	border-width:1px;
+	border-left:medium none;
+	border-right:medium none;
+	border-top:medium none;
+
+
+}
+
+.label-font-red {
+    font-weight: bold;
+    color: red
+}
+

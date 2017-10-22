@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>hrapp</groupId>
+		<artifactId>HRInfo</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>hrapp</groupId>
+	<artifactId>hrinfo-web</artifactId>
+	<packaging>war</packaging>
+	<name />
+	<version>0.0.1-SNAPSHOT</version>
+	<description />
+	<dependencies>
+		<dependency>
+			<groupId>hrapp</groupId>
+			<artifactId>hrinfo-business</artifactId>
+			<type>ejb</type>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+        	<groupId>com.opensymphony</groupId>
+        	<artifactId>xwork-core</artifactId>
+        	<version>2.1.6</version>
+        	<scope>provided</scope>
+        	
+        	<exclusions>
+			 <exclusion>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate</artifactId>
+			 </exclusion>
+			</exclusions>
+			
+    	</dependency>
+    	<dependency>
+        	<groupId>org.apache.struts</groupId> 
+        	<artifactId>struts2-core</artifactId> 
+			<version>2.3.4.1</version>
+        	<scope>provided</scope>
+        	
+        	<exclusions>
+			 <exclusion>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate</artifactId>
+			 </exclusion>
+			</exclusions>
+			
+    	</dependency>
+		
+		<!-- <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>-->
+		<dependency>
+   			<groupId>org.jboss.spec</groupId>
+   			<artifactId>jboss-javaee-6.0</artifactId>
+   			<version>1.0.0.Final</version>
+   			<type>pom</type>
+   			<scope>provided</scope>
+   			
+   			<exclusions>
+			 <exclusion>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate</artifactId>
+			 </exclusion>
+			</exclusions>
+			
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+			
+			<exclusions>
+			 <exclusion>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate</artifactId>
+			 </exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+      		<groupId>displaytag</groupId>
+      		<artifactId>displaytag</artifactId>
+      		<version>1.2</version>
+      		
+      		<exclusions>
+			 <exclusion>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate</artifactId>
+			 </exclusion>
+			</exclusions>
+    	</dependency>
+    	<dependency>
+		   <groupId>joda-time</groupId>
+		   <artifactId>joda-time</artifactId>
+		   <version>2.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+	    <!-- <plugins>
+	      <plugin>
+	        <artifactId>maven-war-plugin</artifactId>
+	        <version>2.3</version>
+	        <configuration>
+	          <packagingExcludes>
+	            WEB-INF/lib/hrinfo-business-*.jar,
+	          </packagingExcludes>
+	        </configuration>
+	      </plugin>
+	    </plugins>-->
+  </build>
+
+</project>

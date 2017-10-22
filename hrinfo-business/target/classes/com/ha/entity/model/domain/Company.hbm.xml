@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.Company" table="company">
+        <id name="companyDid"
+                    column="companyDid"
+                    type="java.lang.Long">
+        </id>
+
+        <property name="companyId"
+                    column="companyId"
+                    type="java.lang.String"
+                    />
+        <property name="companyName"
+                    column="companyName"
+                    type="java.lang.String"
+                    />
+        <property name="regNumber"
+                    column="companyRegNumber"
+                    type="java.lang.String"
+                    />
+        <property name="vatNo"
+                    column="VATNumber"
+                    type="java.lang.String"
+                    />
+        <many-to-one
+                name="parentCompany"
+                class="com.ha.entity.model.domain.Company"
+                not-null="false"
+                lazy="false">
+            <column name="parentCompanyDid"/>
+        </many-to-one>
+
+        <property name="isParent"
+                    column="isparent"
+                    type="java.lang.Boolean"
+                    />
+        <property name="epfNumber"
+                    column="epfnumber"
+                    type="java.lang.String"
+                    />
+
+    </class>
+
+</hibernate-mapping>
+

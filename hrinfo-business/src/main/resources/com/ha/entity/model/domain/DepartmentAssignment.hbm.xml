@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+            <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ha.entity.model.domain.DepartmentAssignment" table="DepartmentAssignment">
+        <id name="deptAssignmentDid"
+                    column="deptAssignmentDid"
+                    type="java.lang.Long">
+                    <generator class="increment"/>
+        </id>
+
+        <many-to-one
+                name="employee"
+                class="com.ha.entity.model.domain.Employee"
+                not-null="true"
+                >
+            <column name="employeeDid"/>
+        </many-to-one>
+
+        <many-to-one
+                name="department"
+                class="com.ha.entity.model.domain.Department"
+                not-null="true"
+                >
+            <column name="departmentDid"/>
+        </many-to-one>
+
+
+    </class>
+
+</hibernate-mapping>
+
